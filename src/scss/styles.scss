@@ -1,0 +1,231 @@
+@use "bootstrap/scss/bootstrap" as *;
+
+.custom-button {
+  border-radius: 2px 40px 2px 40px; /* Установите радиус границ */
+}
+.button-container {
+  margin-top: 10px; /* Отступ сверху для кнопки */
+  text-align: center; /* Центрирование кнопки */
+}
+.textDown{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: end;
+}
+
+.main-content{
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 50%;
+  justify-content: space-between;
+}
+/* Затемняющий слой */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Затемнение */
+  z-index: -1; /* Над видео, но под контентом */
+}
+/* Скрыть текст кнопки на мобильных устройствах */
+@media (max-width: 992px) {
+  .btn-text {
+      display: none; /* Скрыть текст */
+  }
+  .main-content{
+    gap: 20px;
+    display: none;
+    flex-direction: column;
+    width: 70%;
+    height: 50%;
+    justify-content: space-between;
+  }
+  .custom-button {
+    border-radius: 1px 27px 1px 27px; /* Установите радиус границ */
+  }
+  .navbar-toggler{
+    border-radius: 1px 27px 1px 27px;
+  }
+  .main-content-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .catalog-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-content{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    gap: 5px;
+  }
+  .textUpLeft h1 {
+    text-align: center;
+  }
+  .textUpLeft h4 {
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+  }
+  .textDown{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.text-red{
+  color:red; 
+}
+.btn-secondary{
+  background-color: rgb(128, 5, 128);
+  border: 1px solid rgb(128, 5, 128);
+}
+
+.btn-secondary:hover{
+  background-color: rgb(107, 7, 107);
+  border: 1px solid rgb(107, 7, 107);
+}
+
+.offcanvas {
+  width: 100%; /* Занимает весь экран */
+}
+.offcanvas-header {
+  border-bottom: 1px solid rgba(0, 0, 0, .1); /* Линия под заголовком */
+}
+.offcanvas {
+  width: 100%; /* Занимает весь экран */
+}
+.offcanvas-header {
+  border-bottom: 1px solid rgba(0, 0, 0, .1); /* Линия под заголовком */
+}
+
+.navbar-nav {
+  flex-direction: column; /* Горизонтальное выравнивание */
+  justify-content: center; /* Центрирование элементов */
+  width: 100%; /* Занимает всю ширину */
+}
+.navbar-nav .nav-link {
+  margin: 0 15px; /* Отступы между пунктами меню */
+
+}
+
+/* Главный блок с видео */
+.full-height {
+  height: 100vh; /* 100% высоты экрана */
+  position: relative; /* Для позиционирования затемняющего слоя */
+  overflow: hidden; /* Скрыть переполнение */
+}
+/* Видео на заднем фоне */
+#backgroundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Помещаем видео за остальные элементы */
+  transform: translate(-50%, -50%); /* Центрируем видео */
+}
+
+
+.catalog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  color: white;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.card {
+  margin-top: 40px;
+  width: 100px;
+}
+
+.textUpLeft{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  text-align: left;
+  height: auto;
+}
+.btn-main{
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  height: auto;
+  margin-top: auto;
+  background-color: purple;
+  border: 1px solid purple;
+  font-size: 14px;
+}
+.btn-main:hover{
+  background-color: rgb(112, 10, 112);
+  border: 1px solid rgb(112, 10, 112);
+}
+.p-main{
+  display: flex;
+  width: 150px;
+  font-size: 12px;
+  justify-content: flex-end;
+  align-items: end;
+  margin-bottom: 5px;
+}
+
+.main-content-card{
+  display: flex;
+  gap: 20px;
+  width: 70%;
+  height: 50%;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.btn-main-custom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+}
+
+.card-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 4px 4px;
+  padding: 6px;
+  background-color: rgb(235, 235, 235);
+  border-top: 1px solid rgb(179, 179, 179) ;
+}
+
+.btn-inside-card{
+  width: 95%;
+}
+
+.offcanvas-backdrop.show{
+  display: none;
+  opacity: 0;
+}
