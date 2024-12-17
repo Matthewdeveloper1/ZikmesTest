@@ -1,5 +1,6 @@
 {
   "name": "my-project",
+  "homepage": "https://Matthewdeveloper1.github.io/ZikmesTest",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
